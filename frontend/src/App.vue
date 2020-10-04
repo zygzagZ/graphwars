@@ -38,7 +38,7 @@
           class="fill-height"
           fluid
       >
-
+        <game></game>
       </v-container>
     </v-main>
     <v-footer
@@ -51,9 +51,13 @@
 </template>
 
 <script>
+import Game from './components/Game'
 export default {
   props: {
     source: String,
+  },
+  components: {
+    Game
   },
 
   data: () => ({
