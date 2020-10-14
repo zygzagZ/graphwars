@@ -30,25 +30,8 @@ export default {
   },
 
   mounted () {
-    const loc = `${location.origin.replace('http', 'ws')}/api${location.pathname}`
-    const ws = new WebSocket(loc)
-    console.log('opening ws', loc, ws)
-
-    ws.addEventListener('error', (e) => {
-      console.error('ws err', e)
-    })
-
-    ws.addEventListener('open', () => {
-      console.log('ws opened!')
-      ws.send('ping')
-    })
-
-    ws.addEventListener('close', (e) => {
-      console.log('ws closed!')
-    })
-
-    ws.addEventListener('message', (m) => {
-      console.log(m)
+    this.$socket.emit('test', 'msg', (data) => {
+      console.log('data: ', data)
     })
   }
 }
