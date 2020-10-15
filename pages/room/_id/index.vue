@@ -28,11 +28,15 @@ export default {
   validate ({ params }) {
     return !!rooms[params.id]
   },
-
-  mounted () {
-    this.$socket.emit('test', 'msg', (data) => {
-      console.log('data: ', data)
-    })
+  data () {
+    return {
+      users: []
+    }
+  },
+  sockets: {
+    updateUsers (users) {
+      this.users = users
+    }
   }
 }
 </script>
