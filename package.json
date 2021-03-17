@@ -15,7 +15,7 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.2.2",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.7",
+    "nuxt": "^2.15.3",
     "function-plot": "^1.22.2",
     "socket.io": "^2.4.0",
     "vue-socket.io": "^3.0.10"
