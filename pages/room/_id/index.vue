@@ -46,10 +46,9 @@ export default {
   data () {
     return {
       fn: 'x^2/99',
-      graphs: []
+      graphs: [],
+      socket: null
     }
-  },
-  sockets: {
   },
   watch: {
     fn () {
@@ -61,7 +60,14 @@ export default {
     }
   },
   mounted () {
+    this.socket = this.$nuxtSocket({
+      persist: true
+    })
     this.drawGraph()
+    console.log('socket emit!')
+    this.socket.emit('fn1', { id: 'abc123' }, (resp) => {
+      console.log('socket resp ', resp)
+    })
   },
   methods: {
     addGraph (fn, playerX) {

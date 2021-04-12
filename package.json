@@ -14,18 +14,17 @@
     "@nuxt/content": "latest",
     "@nuxtjs/axios": "latest",
     "@nuxtjs/pwa": "latest",
-    "core-js": "latest",
+    "@nuxtjs/vuetify": "latest",
+    "core-js": "^3.10.1",
     "function-plot": "latest",
-    "nuxt": "latest",
-    "socket.io": "latest",
-    "vue-socket.io": "latest",
-    "@nuxtjs/vuetify": "latest"
+    "nuxt": "^2.15.4",
+    "nuxt-socket-io": "latest"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "latest",
     "@nuxtjs/eslint-module": "latest",
     "babel-eslint": "latest",
-    "eslint": "latest",
+    "eslint": "^7.24.0",
     "eslint-plugin-nuxt": "latest"
   }
 }

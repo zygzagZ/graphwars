@@ -21,7 +21,6 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '~/plugins/socket.client.js' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -43,8 +42,8 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-
-    '~/modules/ws'
+    // https://www.npmjs.com/package/nuxt-socket-io
+    'nuxt-socket-io'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -70,6 +69,14 @@ export default {
         }
       }
     }
+  },
+
+  // https://www.npmjs.com/package/nuxt-socket-io
+  io: {
+    // module options
+    sockets: [{
+      name: 'default'
+    }]
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
