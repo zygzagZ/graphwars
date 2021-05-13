@@ -17,7 +17,7 @@
     "@nuxtjs/vuetify": "latest",
     "core-js": "^3.10.1",
     "function-plot": "latest",
-    "nuxt": "^2.15.4",
+    "nuxt": "^2.15.6",
     "nuxt-socket-io": "latest"
   },
   "devDependencies": {
